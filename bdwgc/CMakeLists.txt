@@ -180,17 +180,16 @@ SET_TARGET_PROPERTIES(gc-lib   PROPERTIES
 
 ADD_LIBRARY(          gcmt-lib STATIC      ${SRC})
 SET_TARGET_PROPERTIES(gcmt-lib PROPERTIES
-                      COMPILE_DEFINITIONS -DGC_THREADS
                       COMPILE_DEFINITIONS -DGC_NOT_DLL)
 
 ADD_LIBRARY(          gcmt-dll  SHARED     ${SRC})
-SET_TARGET_PROPERTIES(gcmt-dll  PROPERTIES
-                      COMPILE_DEFINITIONS -DGC_THREADS)
 
 ADD_EXECUTABLE(cord WIN32
                cord/cordbscs.c cord/cordxtra.c cord/de.c cord/de_win.c)
+
 SET_TARGET_PROPERTIES(cord    PROPERTIES
                       COMPILE_DEFINITIONS -DGC_NOT_DLL)
+
 TARGET_LINK_LIBRARIES(cord gc-lib)
 
 ADD_SUBDIRECTORY(tests)
