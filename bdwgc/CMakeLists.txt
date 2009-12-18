@@ -162,7 +162,7 @@ IF(CMAKE_USE_WIN32_THREADS_INIT)
 	ADD_DEFINITIONS("-DEMPTY_GETENV_RESULTS=1") #TODO test	
 ENDIF(CMAKE_USE_WIN32_THREADS_INIT)
 
-OPTION(enable_gcj_support, "Support for gcj", NO)
+OPTION(enable_gcj_support "Support for gcj" NO)
 IF(enable_gcj_support)
 	#TODO AM_CONDITIONAL(ENABLE_GCJ_SUPPORT,     [test x"$enable_gcj_support" != xno])
 	ADD_DEFINITIONS("-DGC_GCJ_SUPPORT=1")
