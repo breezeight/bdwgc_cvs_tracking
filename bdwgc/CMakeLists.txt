@@ -9,6 +9,8 @@
 
 PROJECT(gc)
 
+CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+
 ADD_DEFINITIONS("-D_CRT_SECURE_NO_DEPRECATE
                  -D__STDC__
                  -DALL_INTERIOR_POINTERS
@@ -16,6 +18,155 @@ ADD_DEFINITIONS("-D_CRT_SECURE_NO_DEPRECATE
 ")
 
 INCLUDE_DIRECTORIES(include)
+
+OPTION(enable_threads "TODO" NO)
+IF(enable_threads)
+	FIND_PACKAGE(Threads REQUIRED)	
+	MESSAGE("Thread Model: ${CMAKE_THREAD_LIBS_INIT}" )
+ENDIF(enable_threads)
+
+OPTION(enable_parallel_mark "Parallelize marking and free list construction" NO)
+
+#IF(Threads_FOUND)
+#	ADD_DEFINITIONS("")
+#ELSE
+#	MESSAGE("Parallel mark requires enable_threads ON" )	
+#ENDIF(Threads_FOUND)
+
+IF(enable_parallel_mark)
+ENDIF(enable_parallel_mark)
+
+OPTION(enable_cplusplus "install C++ support" NO)
+
+SET(HOST ${CMAKE_HOST_SYSTEM_PROCESSOR}--${CMAKE_SYSTEM}) #FIXME missing the vendor field.Use lowercase
+
+#Thread Detection. Relying on cmake for lib an includes.
+#TODO check cmake detection
+IF(CMAKE_USE_PTHREADS_INIT)
+	IF( "HOST" MATCHES x86-.*-linux.*|ia64-.*-linux.*|i586-.*-linux.*|i686-.*-linux.*|x86_64-.*-linux.*|alpha-.*-linux.*|sparc.*-.*-linux.*)
+		ADD_DEFINITIONS("-DGC_LINUX_THREADS")
+		ADD_DEFINITIONS("-D_REENTRANT")
+       		IF (${enable_parallel_mark})
+			ADD_DEFINITIONS("-DPARALLEL_MARK")
+		ENDIF()
+		ADD_DEFINITIONS("-DTHREAD_LOCAL_ALLOC")
+		MESSAGE("Explicit GC_INIT() calls may be required.")
+	ENDIF()
+	IF ( "HOST" MATCHES .*-.*-linux.*)
+		ADD_DEFINITIONS("-DGC_LINUX_THREADS")
+		ADD_DEFINITIONS("-D_REENTRANT")
+	ENDIF()
+	IF ( "HOST" MATCHES .*-.*-aix.*)
+		ADD_DEFINITIONS("-DGC_AIX_THREADS")
+		ADD_DEFINITIONS("-D_REENTRANT")
+	ENDIF()
+	IF ( "HOST" MATCHES .*-.*-hpux11.*)
+		MESSAGE("Only HP/UX 11 POSIX threads are supported.")
+		ADD_DEFINITIONS("-DGC_HPUX_THREADS")
+		ADD_DEFINITIONS("-D_POSIX_C_SOURCE=199506L") #TODO test -DVAR=value. Alternative is COMPILE_DEFINITIONS property
+       		IF (${enable_parallel_mark})
+			ADD_DEFINITIONS("-DPARALLEL_MARK")
+		ENDIF()
+		MESSAGE("Explicit GC_INIT() calls may be required.")
+		ADD_DEFINITIONS("-D_REENTRANT=1)")#TODO
+	ENDIF()
+	IF ( "HOST" MATCHES .*-.*-hpux10.*)
+		MESSAGE("Only HP/UX 11 POSIX threads are supported.")
+	ENDIF()
+	IF ( "HOST" MATCHES .*-.*-openbsd.*)
+		ADD_DEFINITIONS("-DGC_OPENBSD_THREADS")
+		#FIXME openbsd_threads=true
+	ENDIF()
+	IF ( "HOST" MATCHES .*-.*-freebsd.*)
+		MESSAGE("FreeBSD does not yet fully support threads with Boehm GC.")
+		ADD_DEFINITIONS("-DGC_FREEBSD_THREADS")
+	ENDIF()
+	IF ( "HOST" MATCHES .*-.*-kfreebsd.*-gnu)
+		ADD_DEFINITIONS("-DGC_FREEBSD_THREADS")
+		ADD_DEFINITIONS("-D_REENTRANT")
+       		IF (${enable_parallel_mark})
+			ADD_DEFINITIONS("-DPARALLEL_MARK")
+		ENDIF()
+		ADD_DEFINITIONS(THREAD_LOCAL_ALLOC")
+		ADD_DEFINITIONS(USE_COMPILER_TLS")
+	ENDIF()
+	IF ( "HOST" MATCHES .*-.*-gnu.*)
+		ADD_DEFINITIONS("-DGC_GNU_THREADS")
+		ADD_DEFINITIONS("-D_REENTRANT")
+		ADD_DEFINITIONS("-DTHREAD_LOCAL_ALLOC")
+	ENDIF()
+	IF ( "HOST" MATCHES .*-.*-netbsd.*)
+		MESSAGE("Only on NetBSD 2.0 or later.")
+		ADD_DEFINITIONS("-DGC_NETBSD_THREADS")
+		ADD_DEFINITIONS("-D_REENTRANT")
+		ADD_DEFINITIONS("-D_PTHREADS")
+	ENDIF()
+	IF ( "HOST" MATCHES .*-.*-solaris.*)
+		ADD_DEFINITIONS("-DGC_SOLARIS_THREADS")	
+		ADD_DEFINITIONS("-DTHREAD_LOCAL_ALLOC")
+#TODO
+#	if test "$GCC" != yes; then
+#          CFLAGS="$CFLAGS -O"
+#          need_atomic_ops_asm=true
+#        fi
+
+	ENDIF()
+	IF ( "HOST" MATCHES .*-.*-irix.*)
+		ADD_DEFINITIONS("-DGC_IRIX_THREADS")
+	ENDIF()
+	IF ( "HOST" MATCHES .*-.*-cygwin.*)
+		ADD_DEFINITIONS("-DGC_THREADS")
+		ADD_DEFINITIONS("-D_REENTRANT")
+       		IF (${enable_parallel_mark})
+			ADD_DEFINITIONS("-DPARALLEL_MARK")
+		ENDIF()
+		ADD_DEFINITIONS("-DTHREAD_LOCAL_ALLOC")
+
+#TODO
+#	win32_threads=true
+	ENDIF()
+	IF ( "HOST" MATCHES .*-.*-darwin.*)
+		ADD_DEFINITIONS("-DGC_DARWIN_THREADS")
+		ADD_DEFINITIONS("-DTHREAD_LOCAL_ALLOC")
+		MESSAGE("Explicit GC_INIT() calls may be required.")
+		# Parallel-mark is currently unreliable on Darwin; ignore request
+       		#IF (${enable_parallel_mark})
+		#	ADD_DEFINITIONS("-DPARALLEL_MARK")
+		#ENDIF()
+		#TODO
+		#darwin_threads=true
+	ENDIF()
+	IF ( "HOST" MATCHES .*-.*-osf*)
+		ADD_DEFINITIONS("-DGC_OSF1_THREADS")
+       		IF (${enable_parallel_mark})
+			ADD_DEFINITIONS("-DPARALLEL_MARK")
+			ADD_DEFINITIONS("-DTHREAD_LOCAL_ALLOC")
+			MESSAGE("Explicit GC_INIT() calls may be required.")
+			# May want to enable it in other cases, too.
+		  	# Measurements havent yet been done.
+		ENDIF()
+	ENDIF()
+	IF ( "HOST" MATCHES .*-.*-linux.*)
+		ADD_DEFINITIONS("-DGC_LINUX_THREADS")
+		ADD_DEFINITIONS("-D_REENTRANT")
+	ENDIF()
+ENDIF(CMAKE_USE_PTHREADS_INIT)
+
+IF(CMAKE_USE_WIN32_THREADS_INIT)
+	ADD_DEFINITIONS("-DGC_THREADS")
+    	#win32_threads=true   TODO
+       	IF (${enable_parallel_mark})
+		ADD_DEFINITIONS("-DPARALLEL_MARK")
+		ADD_DEFINITIONS("-DTHREAD_LOCAL_ALLOC")
+	ENDIF()
+	ADD_DEFINITIONS("-DEMPTY_GETENV_RESULTS=1") #TODO test	
+ENDIF(CMAKE_USE_WIN32_THREADS_INIT)
+
+OPTION(enable_gcj_support, "Support for gcj", NO)
+IF(enable_gcj_support)
+	#TODO AM_CONDITIONAL(ENABLE_GCJ_SUPPORT,     [test x"$enable_gcj_support" != xno])
+	ADD_DEFINITIONS("-DGC_GCJ_SUPPORT=1")
+ENDIF(enable_gcj_support)
 
 SET(SRC alloc.c reclaim.c allchblk.c misc.c mach_dep.c os_dep.c
         mark_rts.c headers.c mark.c obj_map.c blacklst.c finalize.c
