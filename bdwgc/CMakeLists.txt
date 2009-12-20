@@ -19,10 +19,13 @@ ADD_DEFINITIONS("-D_CRT_SECURE_NO_DEPRECATE
 
 INCLUDE_DIRECTORIES(include)
 
+SET(LIBS)
 OPTION(enable_threads "TODO" NO)
 IF(enable_threads)
 	FIND_PACKAGE(Threads REQUIRED)	
 	MESSAGE("Thread Model: ${CMAKE_THREAD_LIBS_INIT}" )
+	INCLUDE_DIRECTORIES(${Threads_INCLUDE_DIR})
+	SET(LIBS ${LIBS} ${Threads_LIBRARIES})
 ENDIF(enable_threads)
 
 OPTION(enable_parallel_mark "Parallelize marking and free list construction" NO)
@@ -38,7 +41,10 @@ ENDIF(enable_parallel_mark)
 
 OPTION(enable_cplusplus "install C++ support" NO)
 
-SET(HOST ${CMAKE_HOST_SYSTEM_PROCESSOR}--${CMAKE_SYSTEM}) #FIXME missing the vendor field.Use lowercase
+SET(_HOST ${CMAKE_HOST_SYSTEM_PROCESSOR}--${CMAKE_SYSTEM}) #FIXME missing the vendor field.Use lowercase
+
+STRING(TOLOWER ${_HOST} HOST)
+MESSAGE("HOST = ${HOST}")
 
 #Thread Detection. Relying on cmake for lib an includes.
 #TODO check cmake detection
@@ -176,7 +182,8 @@ SET(SRC alloc.c reclaim.c allchblk.c misc.c mach_dep.c os_dep.c
 
 ADD_LIBRARY(          gc-lib   STATIC      ${SRC})
 SET_TARGET_PROPERTIES(gc-lib   PROPERTIES
-                      COMPILE_DEFINITIONS -DGC_NOT_DLL)
+                      COMPILE_DEFINITIONS GC_NOT_DLL)
+#TODO TARGET_LINK_LIBRARIES(...  ...  ${LIBS})
 
 ADD_LIBRARY(          gcmt-lib STATIC      ${SRC})
 SET_TARGET_PROPERTIES(gcmt-lib PROPERTIES
