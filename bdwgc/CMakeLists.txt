@@ -1,3 +1,4 @@
+
 # (C) Jack Andrews 2008
 # licensed under GPL 2.0
 #
@@ -17,7 +18,15 @@ ADD_DEFINITIONS("-D_CRT_SECURE_NO_DEPRECATE
                  -DGC_BUILD
 ")
 
+#LIBATOMIC #TODO
+#ADD_LIBRARY(atomic_ops STATIC )
+#SET_TARGET_PROPERTIES(atomic_ops PROPERTIES COMPILE_FLAGS -DNDEBUG)
+
+
+#LIBGC
+
 INCLUDE_DIRECTORIES(include)
+INCLUDE_DIRECTORIES(src)
 
 SET(LIBS)
 OPTION(enable_threads "TODO" NO)
@@ -187,16 +196,16 @@ SET_TARGET_PROPERTIES(gc-lib   PROPERTIES
 
 ADD_LIBRARY(          gcmt-lib STATIC      ${SRC})
 SET_TARGET_PROPERTIES(gcmt-lib PROPERTIES
-                      COMPILE_DEFINITIONS -DGC_NOT_DLL)
+                      COMPILE_DEFINITIONS GC_NOT_DLL)
 
 ADD_LIBRARY(          gcmt-dll  SHARED     ${SRC})
 
-ADD_EXECUTABLE(cord WIN32
-               cord/cordbscs.c cord/cordxtra.c cord/de.c cord/de_win.c)
-
-SET_TARGET_PROPERTIES(cord    PROPERTIES
-                      COMPILE_DEFINITIONS -DGC_NOT_DLL)
-
-TARGET_LINK_LIBRARIES(cord gc-lib)
+IF(WIN32)
+  ADD_EXECUTABLE(cord cord/cordbscs.c cord/cordxtra.c cord/de.c cord/de_win.c)
+  SET_TARGET_PROPERTIES(cord WIN32_EXECUTABLE TRUE)
+  SET_TARGET_PROPERTIES(cord    PROPERTIES
+                      COMPILE_DEFINITIONS GC_NOT_DLL)
+  TARGET_LINK_LIBRARIES(cord gc-lib)
+ENDIF(WIN32)
 
 ADD_SUBDIRECTORY(tests)
