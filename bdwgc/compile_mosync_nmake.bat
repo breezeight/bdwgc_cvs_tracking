@@ -1,0 +1,1 @@
+cmake -DCMAKE_TOOLCHAIN_FILE=Toolchain-MoSync.cmake . -G "NMake Makefiles"
