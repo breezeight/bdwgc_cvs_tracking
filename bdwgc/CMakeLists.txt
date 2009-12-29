@@ -189,16 +189,19 @@ SET(SRC alloc.c reclaim.c allchblk.c misc.c mach_dep.c os_dep.c
         typd_mlc.c ptr_chck.c gc_cpp.cc mallocx.c checksums.c
         win32_threads.c)
 
-ADD_LIBRARY(          gc-lib   STATIC      ${SRC})
-SET_TARGET_PROPERTIES(gc-lib   PROPERTIES
+ADD_LIBRARY(gc STATIC ${SRC})
+SET_TARGET_PROPERTIES(gc   PROPERTIES
                       COMPILE_DEFINITIONS GC_NOT_DLL)
 #TODO TARGET_LINK_LIBRARIES(...  ...  ${LIBS})
 
-ADD_LIBRARY(          gcmt-lib STATIC      ${SRC})
-SET_TARGET_PROPERTIES(gcmt-lib PROPERTIES
+IF(MOSYNC)
+ELSE(MOSYNC)
+	ADD_LIBRARY(gcmt-lib STATIC ${SRC})
+	SET_TARGET_PROPERTIES(gcmt-lib PROPERTIES
                       COMPILE_DEFINITIONS GC_NOT_DLL)
 
-ADD_LIBRARY(          gcmt-dll  SHARED     ${SRC})
+	ADD_LIBRARY(gcmt-dll SHARED ${SRC})
+ENDIF(MOSYNC)
 
 IF(WIN32)
   ADD_EXECUTABLE(cord cord/cordbscs.c cord/cordxtra.c cord/de.c cord/de_win.c)
