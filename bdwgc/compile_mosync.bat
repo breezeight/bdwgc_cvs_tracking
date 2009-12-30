@@ -1,1 +1,1 @@
-cmake -DCMAKE_TOOLCHAIN_FILE=Toolchain-MoSync.cmake .
+cmake -DCMAKE_TOOLCHAIN_FILE=Toolchain-MoSync.cmake . -G "Eclipse CDT4 - NMake Makefiles"

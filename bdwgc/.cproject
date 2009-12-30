@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?>
+
+<cproject>
+<storageModule moduleId="org.eclipse.cdt.core.settings">
+<cconfiguration id="org.eclipse.cdt.core.default.config.1">
+<storageModule buildSystemId="org.eclipse.cdt.core.defaultConfigDataProvider" id="org.eclipse.cdt.core.default.config.1" moduleId="org.eclipse.cdt.core.settings" name="Configuration">
+<externalSettings/>
+<extensions>
+<extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
+<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+</extensions>
+</storageModule>
+<storageModule moduleId="org.eclipse.cdt.core.language.mapping">
+<project-mappings/>
+</storageModule>
+<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+<storageModule moduleId="org.eclipse.cdt.core.pathentry">
+<pathentry excluding="**/CMakeFiles/" kind="out" path=""/>
+<pathentry kind="mac" name="MAPIP" path="" value=""/>
+<pathentry kind="mac" name="NO_CLOCK" path="" value=""/>
+<pathentry kind="mac" name="__GNU__" path="" value=""/>
+<pathentry kind="mac" name="__i386__" path="" value=""/>
+<pathentry kind="mac" name="SMALL_CONFIG" path="" value=""/>
+<pathentry kind="mac" name="GC_NOT_DLL" path="" value=""/>
+<pathentry kind="mac" name="__STDC_HOSTED__" path="" value="1"/>
+<pathentry kind="mac" name="__GNUC__" path="" value="3"/>
+<pathentry kind="mac" name="__GNUC_MINOR__" path="" value="4"/>
+<pathentry kind="mac" name="__GNUC_PATCHLEVEL__" path="" value="6"/>
+<pathentry kind="mac" name="__SIZE_TYPE__" path="" value="long"/>
+<pathentry kind="mac" name="unsigned" path="" value="int"/>
+<pathentry kind="mac" name="__PTRDIFF_TYPE__" path="" value="long"/>
+<pathentry kind="mac" name="int" path="" value="__WCHAR_TYPE__"/>
+<pathentry kind="mac" name="short" path="" value="unsigned"/>
+<pathentry kind="mac" name="__GXX_ABI_VERSION" path="" value="1002"/>
+<pathentry kind="mac" name="__USING_SJLJ_EXCEPTIONS__" path="" value="1"/>
+<pathentry kind="mac" name="__SCHAR_MAX__" path="" value="127"/>
+<pathentry kind="mac" name="__SHRT_MAX__" path="" value="32767"/>
+<pathentry kind="mac" name="__INT_MAX__" path="" value="2147483647"/>
+<pathentry kind="mac" name="__LONG_MAX__" path="" value="2147483647L"/>
+<pathentry kind="mac" name="__LONG_LONG_MAX__" path="" value="9223372036854775807LL"/>
+<pathentry kind="mac" name="__WCHAR_MAX__" path="" value="65535U"/>
+<pathentry kind="mac" name="__CHAR_BIT__" path="" value="8"/>
+<pathentry kind="mac" name="__FLT_EVAL_METHOD__" path="" value="0"/>
+<pathentry kind="mac" name="__FLT_RADIX__" path="" value="2"/>
+<pathentry kind="mac" name="__FLT_MANT_DIG__" path="" value="24"/>
+<pathentry kind="mac" name="__FLT_DIG__" path="" value="6"/>
+<pathentry kind="mac" name="__FLT_MIN_EXP__" path="" value="(-125)"/>
+<pathentry kind="mac" name="__FLT_MIN_10_EXP__" path="" value="(-37)"/>
+<pathentry kind="mac" name="__FLT_MAX_EXP__" path="" value="128"/>
+<pathentry kind="mac" name="__FLT_MAX_10_EXP__" path="" value="38"/>
+<pathentry kind="mac" name="__FLT_MAX__" path="" value="3.40282347e+38F"/>
+<pathentry kind="mac" name="__FLT_MIN__" path="" value="1.17549435e-38F"/>
+<pathentry kind="mac" name="__FLT_EPSILON__" path="" value="1.19209290e-7F"/>
+<pathentry kind="mac" name="__FLT_DENORM_MIN__" path="" value="1.40129846e-45F"/>
+<pathentry kind="mac" name="__FLT_HAS_INFINITY__" path="" value="1"/>
+<pathentry kind="mac" name="__FLT_HAS_QUIET_NAN__" path="" value="1"/>
+<pathentry kind="mac" name="__DBL_MANT_DIG__" path="" value="53"/>
+<pathentry kind="mac" name="__DBL_DIG__" path="" value="15"/>
+<pathentry kind="mac" name="__DBL_MIN_EXP__" path="" value="(-1021)"/>
+<pathentry kind="mac" name="__DBL_MIN_10_EXP__" path="" value="(-307)"/>
+<pathentry kind="mac" name="__DBL_MAX_EXP__" path="" value="1024"/>
+<pathentry kind="mac" name="__DBL_MAX_10_EXP__" path="" value="308"/>
+<pathentry kind="mac" name="__DBL_MAX__" path="" value="1.7976931348623157e+308"/>
+<pathentry kind="mac" name="__DBL_MIN__" path="" value="2.2250738585072014e-308"/>
+<pathentry kind="mac" name="__DBL_EPSILON__" path="" value="2.2204460492503131e-16"/>
+<pathentry kind="mac" name="__DBL_DENORM_MIN__" path="" value="4.9406564584124654e-324"/>
+<pathentry kind="mac" name="__DBL_HAS_INFINITY__" path="" value="1"/>
+<pathentry kind="mac" name="__DBL_HAS_QUIET_NAN__" path="" value="1"/>
+<pathentry kind="mac" name="__LDBL_MANT_DIG__" path="" value="53"/>
+<pathentry kind="mac" name="__LDBL_DIG__" path="" value="15"/>
+<pathentry kind="mac" name="__LDBL_MIN_EXP__" path="" value="(-1021)"/>
+<pathentry kind="mac" name="__LDBL_MIN_10_EXP__" path="" value="(-307)"/>
+<pathentry kind="mac" name="__LDBL_MAX_EXP__" path="" value="1024"/>
+<pathentry kind="mac" name="__LDBL_MAX_10_EXP__" path="" value="308"/>
+<pathentry kind="mac" name="__DECIMAL_DIG__" path="" value="17"/>
+<pathentry kind="mac" name="__LDBL_MAX__" path="" value="1.7976931348623157e+308L"/>
+<pathentry kind="mac" name="__LDBL_MIN__" path="" value="2.2250738585072014e-308L"/>
+<pathentry kind="mac" name="__LDBL_EPSILON__" path="" value="2.2204460492503131e-16L"/>
+<pathentry kind="mac" name="__LDBL_DENORM_MIN__" path="" value="4.9406564584124654e-324L"/>
+<pathentry kind="mac" name="__LDBL_HAS_INFINITY__" path="" value="1"/>
+<pathentry kind="mac" name="__LDBL_HAS_QUIET_NAN__" path="" value="1"/>
+<pathentry kind="mac" name="__REGISTER_PREFIX__" path="" value=""/>
+<pathentry kind="mac" name="__USER_LABEL_PREFIX__" path="" value=""/>
+<pathentry kind="mac" name="__VERSION__" path="" value="&quot;3.4.6&quot;"/>
+<pathentry kind="mac" name="__NO_INLINE__" path="" value="1"/>
+<pathentry kind="mac" name="__FINITE_MATH_ONLY__" path="" value="0"/>
+<pathentry kind="mac" name="__cplusplus" path="" value="1"/>
+<pathentry kind="mac" name="__GNUG__" path="" value="3"/>
+<pathentry kind="mac" name="__GXX_WEAK__" path="" value="0"/>
+<pathentry kind="mac" name="__DEPRECATED" path="" value="1"/>
+<pathentry kind="mac" name="__WCHAR_UNSIGNED__" path="" value="1"/>
+<pathentry include="C:/MoSync/include" kind="inc" path="" system="true"/>
+<pathentry include="C:/Documents and Settings/Nicola Brisotto/Documenti/bdwgc_cvs_tracking/bdwgc/include" kind="inc" path="" system="true"/>
+<pathentry include="C:/Documents and Settings/Nicola Brisotto/Documenti/bdwgc_cvs_tracking/bdwgc/libatomic_ops/src" kind="inc" path="" system="true"/>
+</storageModule>
+<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
+<buildTargets>
+<target name=": edit_cache" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>edit_cache</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[lib] gc" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>gc</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[lib] gc/fast" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>gc/fast</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name=": rebuild_cache" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>rebuild_cache</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name=": all" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>all</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name=": clean" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>clean</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] allchblk.c.obj" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>allchblk.c.obj</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] allchblk.c.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>allchblk.c.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] allchblk.c.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>allchblk.c.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] alloc.c.obj" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>alloc.c.obj</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] alloc.c.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>alloc.c.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] alloc.c.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>alloc.c.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] blacklst.c.obj" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>blacklst.c.obj</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] blacklst.c.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>blacklst.c.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] blacklst.c.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>blacklst.c.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] checksums.c.obj" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>checksums.c.obj</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] checksums.c.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>checksums.c.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] checksums.c.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>checksums.c.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] dbg_mlc.c.obj" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>dbg_mlc.c.obj</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] dbg_mlc.c.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>dbg_mlc.c.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] dbg_mlc.c.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>dbg_mlc.c.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] dyn_load.c.obj" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>dyn_load.c.obj</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] dyn_load.c.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>dyn_load.c.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] dyn_load.c.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>dyn_load.c.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] finalize.c.obj" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>finalize.c.obj</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] finalize.c.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>finalize.c.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] finalize.c.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>finalize.c.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] gc_cpp.cc.obj" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>gc_cpp.cc.obj</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] gc_cpp.cc.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>gc_cpp.cc.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] gc_cpp.cc.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>gc_cpp.cc.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] headers.c.obj" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>headers.c.obj</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] headers.c.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>headers.c.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] headers.c.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>headers.c.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] mach_dep.c.obj" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>mach_dep.c.obj</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] mach_dep.c.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>mach_dep.c.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] mach_dep.c.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>mach_dep.c.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] malloc.c.obj" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>malloc.c.obj</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] malloc.c.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>malloc.c.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] malloc.c.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>malloc.c.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] mallocx.c.obj" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>mallocx.c.obj</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] mallocx.c.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>mallocx.c.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] mallocx.c.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>mallocx.c.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] mark.c.obj" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>mark.c.obj</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] mark.c.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>mark.c.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] mark.c.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>mark.c.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] mark_rts.c.obj" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>mark_rts.c.obj</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] mark_rts.c.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>mark_rts.c.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] mark_rts.c.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>mark_rts.c.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] misc.c.obj" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>misc.c.obj</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] misc.c.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>misc.c.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] misc.c.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>misc.c.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] new_hblk.c.obj" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>new_hblk.c.obj</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] new_hblk.c.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>new_hblk.c.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] new_hblk.c.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>new_hblk.c.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] obj_map.c.obj" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>obj_map.c.obj</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] obj_map.c.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>obj_map.c.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] obj_map.c.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>obj_map.c.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] os_dep.c.obj" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>os_dep.c.obj</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] os_dep.c.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>os_dep.c.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] os_dep.c.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>os_dep.c.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] ptr_chck.c.obj" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>ptr_chck.c.obj</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] ptr_chck.c.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>ptr_chck.c.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] ptr_chck.c.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>ptr_chck.c.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] reclaim.c.obj" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>reclaim.c.obj</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] reclaim.c.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>reclaim.c.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] reclaim.c.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>reclaim.c.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] stubborn.c.obj" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>stubborn.c.obj</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] stubborn.c.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>stubborn.c.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] stubborn.c.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>stubborn.c.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] typd_mlc.c.obj" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>typd_mlc.c.obj</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] typd_mlc.c.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>typd_mlc.c.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] typd_mlc.c.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>typd_mlc.c.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] win32_threads.c.obj" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>win32_threads.c.obj</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] win32_threads.c.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>win32_threads.c.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] win32_threads.c.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>win32_threads.c.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[exe] gctest" path="tests" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>gctest</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[exe] gctest/fast" path="tests" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>gctest/fast</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name=": all" path="tests" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>all</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name=": clean" path="tests" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>clean</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] test.c.obj" path="tests" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>test.c.obj</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] test.c.i" path="tests" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>test.c.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] test.c.s" path="tests" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>nmake</buildCommand>
+<buildArguments/>
+<buildTarget>test.c.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+</buildTargets>
+</storageModule>
+<storageModule moduleId="scannerConfiguration">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile"/>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="C:/MoSync/bin/xgcc.exe" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="nmake" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</storageModule>
+</cconfiguration>
+</storageModule>
+<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+<project id="gc.null.1" name="gc"/>
+</storageModule>
+</cproject>
