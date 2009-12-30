@@ -592,12 +592,12 @@ GC_INNER GC_bool GC_register_main_static_data(void)
 #ifdef __GNUC__
 # pragma weak _DYNAMIC
 #endif
-extern ElfW(Dyn) _DYNAMIC[];
+//extern ElfW(Dyn) _DYNAMIC[];
 
 STATIC struct link_map *
 GC_FirstDLOpenedLinkMap(void)
 {
-    ElfW(Dyn) *dp;
+/*    ElfW(Dyn) *dp;
     static struct link_map *cachedResult = 0;
 
     if( _DYNAMIC == 0) {
@@ -609,12 +609,12 @@ GC_FirstDLOpenedLinkMap(void)
             if( tag == DT_DEBUG ) {
                 struct link_map *lm
                         = ((struct r_debug *)(dp->d_un.d_ptr))->r_map;
-                if( lm != 0 ) cachedResult = lm->l_next; /* might be NIL */
-                break;
-            }
-        }
-    }
-    return cachedResult;
+                if( lm != 0 ) cachedResult = lm->l_next;*/ /* might be NIL */
+//                break;
+//            }
+//        }
+//    }
+//    return cachedResult;
 }
 
 GC_INNER void GC_register_dynamic_libraries(void)
@@ -627,7 +627,7 @@ GC_INNER void GC_register_dynamic_libraries(void)
     }
 # endif
   lm = GC_FirstDLOpenedLinkMap();
-  for (lm = GC_FirstDLOpenedLinkMap();
+  /*for (lm = GC_FirstDLOpenedLinkMap();
        lm != (struct link_map *) 0;  lm = lm->l_next)
     {
         ElfW(Ehdr) * e;
@@ -652,7 +652,7 @@ GC_INNER void GC_register_dynamic_libraries(void)
               break;
           }
         }
-    }
+    }*/
 }
 
 #endif /* !USE_PROC_FOR_LIBRARIES */

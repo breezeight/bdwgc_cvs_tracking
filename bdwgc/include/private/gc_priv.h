@@ -2193,7 +2193,7 @@ GC_EXTERN signed_word GC_bytes_found;
 
 # if defined(NEED_FIND_LIMIT) || \
      defined(USE_PROC_FOR_LIBRARIES) && defined(THREADS)
-JMP_BUF GC_jmp_buf;
+//JMP_BUF GC_jmp_buf;
 
 /* Set up a handler for address faults which will longjmp to    */
 /* GC_jmp_buf;                                                  */

@@ -255,19 +255,19 @@ fail:
     return(p);
 }
 
-GC_API void * GC_CALL GC_pre_incr (void **p, ptrdiff_t how_much)
+/*GC_API*/ void * /*GC_CALL*/ GC_pre_incr (void **p, int how_much)
 {
-    void * initial = *p;
+  /*  void * initial = p;
     void * result = GC_same_obj((void *)((ptr_t)initial + how_much), initial);
 
     if (!GC_all_interior_pointers) {
         (void) GC_is_valid_displacement(result);
     }
     return (*p = result);
-}
+*/}
 
-GC_API void * GC_CALL GC_post_incr (void **p, ptrdiff_t how_much)
-{
+GC_API void * GC_CALL GC_post_incr (void **p, int how_much)
+{/*
     void * initial = *p;
     void * result = GC_same_obj((void *)((ptr_t)initial + how_much), initial);
 
@@ -275,5 +275,5 @@ GC_API void * GC_CALL GC_post_incr (void **p, ptrdiff_t how_much)
         (void) GC_is_valid_displacement(result);
     }
     *p = result;
-    return(initial);
+    return(initial);*/
 }

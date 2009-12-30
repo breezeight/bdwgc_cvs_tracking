@@ -242,7 +242,7 @@ GC_API char * GC_CALL GC_strdup(const char *s)
   lb = strlen(s) + 1;
   if ((copy = GC_malloc_atomic(lb)) == NULL) {
 #   ifndef MSWINCE
-      errno = ENOMEM;
+      //errno = ENOMEM;
 #   endif
     return NULL;
   }

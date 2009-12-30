@@ -655,7 +655,7 @@ GC_API char * GC_CALL GC_debug_strdup(const char *str, GC_EXTRA_PARAMS)
     copy = GC_debug_malloc_atomic(lb, OPT_RA s, i);
     if (copy == NULL) {
 #     ifndef MSWINCE
-        errno = ENOMEM;
+        //errno = ENOMEM;
 #     endif
       return NULL;
     }

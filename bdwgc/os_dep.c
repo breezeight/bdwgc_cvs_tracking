@@ -847,10 +847,10 @@ ptr_t GC_get_main_stack_base(void)
 
 #   if defined(SUNOS5SIGS) || defined(IRIX5) || defined(OSF1) \
     || defined(HURD) || defined(NETBSD)
-        static struct sigaction old_segv_act;
+        //static struct sigaction old_segv_act;
 #       if defined(_sigargs) /* !Irix6.x */ || defined(HPUX) \
         || defined(HURD) || defined(NETBSD) || defined(FREEBSD)
-            static struct sigaction old_bus_act;
+          //	  static struct sigaction old_bus_act;
 #       endif
 #   else
         static GC_fault_handler_t old_segv_handler, old_bus_handler;
@@ -860,31 +860,30 @@ ptr_t GC_get_main_stack_base(void)
     {
 #       if defined(SUNOS5SIGS) || defined(IRIX5)  \
         || defined(OSF1) || defined(HURD) || defined(NETBSD)
-          struct sigaction      act;
+          //sigaction      act;
 
-          act.sa_handler        = h;
+          //act.sa_handler        = h;
 #         if 0 /* Was necessary for Solaris 2.3 and very temporary      */
                /* NetBSD bugs.                                          */
             act.sa_flags          = SA_RESTART | SA_NODEFER;
 #         else
-            act.sa_flags          = SA_RESTART;
+            //act.sa_flags          = SA_RESTART;
 #         endif
 
-          (void) sigemptyset(&act.sa_mask);
 #         ifdef GC_IRIX_THREADS
                 /* Older versions have a bug related to retrieving and  */
                 /* and setting a handler at the same time.              */
                 (void) sigaction(SIGSEGV, 0, &old_segv_act);
                 (void) sigaction(SIGSEGV, &act, 0);
 #         else
-                (void) sigaction(SIGSEGV, &act, &old_segv_act);
+              //  (void) sigaction(SIGSEGV, &act, &old_segv_act);
 #               if defined(IRIX5) && defined(_sigargs) /* Irix 5.x, not 6.x */ \
                    || defined(HPUX) || defined(HURD) || defined(NETBSD) \
                    || defined(FREEBSD)
                     /* Under Irix 5.x or HP/UX, we may get SIGBUS.      */
                     /* Pthreads doesn't exist under Irix 5.x, so we     */
                     /* don't have to worry in the threads case.         */
-                    (void) sigaction(SIGBUS, &act, &old_bus_act);
+                //    (void) sigaction(SIGBUS, &act, &old_bus_act);
 #               endif
 #         endif /* GC_IRIX_THREADS */
 #       else
@@ -904,7 +903,7 @@ ptr_t GC_get_main_stack_base(void)
     /*ARGSUSED*/
     STATIC void GC_fault_handler(int sig)
     {
-        LONGJMP(GC_jmp_buf, 1);
+        ;//LONGJMP(GC_jmp_buf, 1);
     }
 
     GC_INNER void GC_setup_temporary_fault_handler(void)
@@ -919,11 +918,11 @@ ptr_t GC_get_main_stack_base(void)
     {
 #       if defined(SUNOS5SIGS) || defined(IRIX5) \
            || defined(OSF1) || defined(HURD) || defined(NETBSD)
-          (void) sigaction(SIGSEGV, &old_segv_act, 0);
+          ;//(void) sigaction(SIGSEGV, &old_segv_act, 0);
 #         if defined(IRIX5) && defined(_sigargs) /* Irix 5.x, not 6.x */ \
              || defined(HPUX) || defined(HURD) || defined(NETBSD) \
              || defined(FREEBSD)
-              (void) sigaction(SIGBUS, &old_bus_act, 0);
+             ;// (void) sigaction(SIGBUS, &old_bus_act, 0);
 #         endif
 #       else
           (void) signal(SIGSEGV, old_segv_handler);
@@ -947,7 +946,7 @@ ptr_t GC_get_main_stack_base(void)
 
         GC_ASSERT(I_HOLD_LOCK());
         GC_setup_temporary_fault_handler();
-        if (SETJMP(GC_jmp_buf) == 0) {
+        /*if (SETJMP(GC_jmp_buf) == 0) {
             result = (ptr_t)(((word)(p))
                               & ~(MIN_PAGE_SIZE-1));
             for (;;) {
@@ -960,7 +959,7 @@ ptr_t GC_get_main_stack_base(void)
                 }
                 GC_noop1((word)(*result));
             }
-        }
+        }*/
         GC_reset_fault_handler();
         if (!up) {
             result += MIN_PAGE_SIZE;
@@ -1949,18 +1948,18 @@ STATIC ptr_t GC_unix_sbrk_get_mem(word bytes)
 # endif
   {
     ptr_t cur_brk = (ptr_t)sbrk(0);
-    SBRK_ARG_T lsbs = (word)cur_brk & (GC_page_size-1);
+  // SBRK_ARG_T lsbs = (word)cur_brk & (GC_page_size-1);
 
-    if ((SBRK_ARG_T)bytes < 0) {
-        result = 0; /* too big */
-        goto out;
-    }
-    if (lsbs != 0) {
+    //if ((SBRK_ARG_T)bytes < 0) {
+    //    result = 0; /* too big */
+    //    goto out;
+    //}
+    /*if (lsbs != 0) {
         if((ptr_t)sbrk(GC_page_size - lsbs) == (ptr_t)(-1)) {
             result = 0;
             goto out;
         }
-    }
+    }*/
 #   ifdef ADD_HEAP_GUARD_PAGES
       /* This is useful for catching severe memory overwrite problems that */
       /* span heap sections.  It shouldn't otherwise be turned on.         */
@@ -1970,7 +1969,7 @@ STATIC ptr_t GC_unix_sbrk_get_mem(word bytes)
             ABORT("ADD_HEAP_GUARD_PAGES: mprotect failed");
       }
 #   endif /* ADD_HEAP_GUARD_PAGES */
-    result = (ptr_t)sbrk((SBRK_ARG_T)bytes);
+    //result = (ptr_t)sbrk((SBRK_ARG_T)bytes);
     if (result == (ptr_t)(-1)) result = 0;
   }
  out:

@@ -1046,11 +1046,11 @@ void run_one_test(void)
 #       else
             char *y = (char *)(GC_word)fail_proc1;
 #       endif
-        CLOCK_TYPE typed_time;
+        //CLOCK_TYPE typed_time;
 #   endif
-    CLOCK_TYPE start_time;
-    CLOCK_TYPE reverse_time;
-    CLOCK_TYPE tree_time;
+    //CLOCK_TYPE start_time;
+    //CLOCK_TYPE reverse_time;
+    //CLOCK_TYPE tree_time;
     unsigned long time_diff;
 
 #   ifdef FIND_LEAK
@@ -1189,38 +1189,38 @@ void run_one_test(void)
         GC_free(GC_malloc(0));
         GC_free(GC_malloc_atomic(0));
     /* Repeated list reversal test. */
-        GET_TIME(start_time);
+        //GET_TIME(start_time);
         reverse_test();
-        if (GC_print_stats) {
-          GET_TIME(reverse_time);
-          time_diff = MS_TIME_DIFF(reverse_time, start_time);
-          GC_log_printf("-------------Finished reverse_test at time %u (%p)\n",
-                        (unsigned) time_diff, &start_time);
-        }
+        //if (GC_print_stats) {
+          //GET_TIME(reverse_time);
+          //time_diff = MS_TIME_DIFF(reverse_time, start_time);
+          //GC_log_printf("-------------Finished reverse_test at time %u (%p)\n",
+          //              (unsigned) time_diff, &start_time);
+        //}
 #   ifndef DBG_HDRS_ALL
       typed_test();
-      if (GC_print_stats) {
-        GET_TIME(typed_time);
-        time_diff = MS_TIME_DIFF(typed_time, start_time);
-        GC_log_printf("-------------Finished typed_test at time %u (%p)\n",
-                      (unsigned) time_diff, &start_time);
-      }
+      //if (GC_print_stats) {
+        //GET_TIME(typed_time);
+        //time_diff = MS_TIME_DIFF(typed_time, start_time);
+        //GC_log_printf("-------------Finished typed_test at time %u (%p)\n",
+        //              (unsigned) time_diff, &start_time);
+      //}
 #   endif /* DBG_HDRS_ALL */
     tree_test();
-    if (GC_print_stats) {
-      GET_TIME(tree_time);
-      time_diff = MS_TIME_DIFF(tree_time, start_time);
-      GC_log_printf("-------------Finished tree_test at time %u (%p)\n",
-                      (unsigned) time_diff, &start_time);
-    }
+    //if (GC_print_stats) {
+      //GET_TIME(tree_time);
+      //time_diff = MS_TIME_DIFF(tree_time, start_time);
+      //GC_log_printf("-------------Finished tree_test at time %u (%p)\n",
+    //                  (unsigned) time_diff, &start_time);
+    //}
     /* Run reverse_test a second time, so we hopefully notice corruption. */
       reverse_test();
-      if (GC_print_stats) {
-          GET_TIME(reverse_time);
-          time_diff = MS_TIME_DIFF(reverse_time, start_time);
-          GC_log_printf("-------------Finished second reverse_test at time %u (%p)\n",
-                        (unsigned) time_diff, &start_time);
-      }
+      //if (GC_print_stats) {
+      //    GET_TIME(reverse_time);
+      //    time_diff = MS_TIME_DIFF(reverse_time, start_time);
+      //    GC_log_printf("-------------Finished second reverse_test at time %u (%p)\n",
+      //                  (unsigned) time_diff, &start_time);
+      //}
     /* GC_allocate_ml and GC_need_to_lock are no longer exported, and   */
     /* AO_fetch_and_add1() may be unavailable to update a counter.      */
     (void)GC_call_with_alloc_lock(inc_int_counter, &n_tests);
@@ -1234,8 +1234,8 @@ void run_one_test(void)
         exit(0);
       }
 #   endif
-    if (GC_print_stats)
-      GC_log_printf("Finished %p\n", &start_time);
+    //if (GC_print_stats)
+    //  GC_log_printf("Finished %p\n", &start_time);
 }
 
 void check_heap_stats(void)
@@ -1409,7 +1409,7 @@ void GC_CALLBACK warn_proc(char *msg, GC_word p)
     run_one_test();
     check_heap_stats();
 #   ifndef MSWINCE
-      fflush(stdout);
+      //fflush(stdout);
 #   endif
 #   ifdef LINT
         /* Entry points we should be testing, but aren't.                  */

@@ -452,7 +452,7 @@ STATIC mse * GC_push_complex_descriptor(word *addr, complex_descriptor *d,
           register GC_descr descr = d -> ld.ld_descriptor;
 
           nelements = d -> ld.ld_nelements;
-          if (msl - msp <= (ptrdiff_t)nelements) return(0);
+      //    if (msl - msp <= (ptrdiff_t)nelements) return(0);
           sz = d -> ld.ld_size;
           for (i = 0; i < nelements; i++) {
               msp++;

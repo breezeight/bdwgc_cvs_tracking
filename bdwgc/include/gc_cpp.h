@@ -344,7 +344,7 @@ inline gc_cleanup::~gc_cleanup() {
     GC_register_finalizer_ignore_self( GC_base(this), 0, 0, 0, 0 );}
 
 inline void GC_CALLBACK gc_cleanup::cleanup( void* obj, void* displ ) {
-    ((gc_cleanup*) ((char*) obj + (ptrdiff_t) displ))->~gc_cleanup();}
+    ((gc_cleanup*) ((char*) obj + (int) displ))->~gc_cleanup();}
 
 inline gc_cleanup::gc_cleanup() {
     GC_finalization_proc oldProc;

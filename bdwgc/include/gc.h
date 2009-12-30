@@ -30,6 +30,8 @@
 #ifndef GC_H
 #define GC_H
 
+#include <ma.h>
+
 #include "gc_version.h"
         /* Define version numbers here to allow test on build machine   */
         /* for cross-builds.  Note that this defines the header         */
@@ -1125,8 +1127,8 @@ GC_API void * GC_CALL GC_same_obj(void * /* p */, void * /* q */);
 /* the second argument is in units of bytes, not multiples of the       */
 /* object size.  This should either be invoked from a macro, or the     */
 /* call should be automatically generated.                              */
-GC_API void * GC_CALL GC_pre_incr(void **, ptrdiff_t /* how_much */);
-GC_API void * GC_CALL GC_post_incr(void **, ptrdiff_t /* how_much */);
+//GC_API void * GC_CALL GC_pre_incr(void **, ptrdiff_t /* how_much */);
+//GC_API void * GC_CALL GC_post_incr(void **, ptrdiff_t /* how_much */);
 
 /* Check that p is visible                                              */
 /* to the collector as a possibly pointer containing location.          */
