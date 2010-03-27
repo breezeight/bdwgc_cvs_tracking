@@ -186,7 +186,9 @@ ENDIF(enable_gcj_support)
 SET(SRC alloc.c reclaim.c allchblk.c misc.c mach_dep.c os_dep.c
         mark_rts.c headers.c mark.c obj_map.c blacklst.c finalize.c
         new_hblk.c dbg_mlc.c malloc.c stubborn.c dyn_load.c
-        typd_mlc.c ptr_chck.c gc_cpp.cc mallocx.c checksums.c
+        typd_mlc.c ptr_chck.c
+	#gc_cpp.cc 
+	mallocx.c checksums.c
         win32_threads.c)
 
 ADD_LIBRARY(gc STATIC ${SRC})
