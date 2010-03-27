@@ -13,6 +13,7 @@
  * modified is included with the above copyright notice.
  */
 
+#include <maarg.h>
 #include "private/gc_pmark.h"
 
 #include <stdio.h>
